@@ -16,7 +16,12 @@ const router = createRouter({ // 라우터 구성 객체 생성
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
-    }
+    },
+    {
+      path: '/user/info/:id',
+      name: 'user',
+      component: () => import('../views/UserView.vue'),
+    },
   ]
 })
 
